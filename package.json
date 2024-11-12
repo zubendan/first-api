@@ -1,32 +1,32 @@
 {
-	"name": "first-api",
-	"version": "1.0.50",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev:api": "TYPE=api bun run --watch src/index.ts",
-		"lint": "bunx biome check",
-		"lint:fix": "bunx biome check",
-		"compile": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server --outdir ./build ./src/index.ts"
-	},
-	"dependencies": {
-		"@apollo/server": "^4.11.2",
-		"@elysiajs/apollo": "^1.1.1",
-		"@elysiajs/bearer": "^1.1.2",
-		"@elysiajs/cors": "^1.1.1",
-		"@elysiajs/cron": "^1.1.1",
-		"@elysiajs/jwt": "^1.1.1",
-		"@elysiajs/opentelemetry": "^1.1.7",
-		"@elysiajs/swagger": "^1.1.5",
-		"@prisma/client": "^5.22.0",
-		"elysia": "latest",
-		"graphql": "^16.9.0",
-		"pino": "^9.5.0",
-		"sqids": "^0.3.0"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"bun-types": "latest",
-		"prisma": "^5.22.0"
-	},
-	"module": "src/index.js"
+  "name": "first-api",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:api": "TYPE=api bun run --watch src/index.ts",
+    "lint": "bunx biome check",
+    "lint:fix": "bunx biome check --write",
+    "compile": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile server --outdir ./build ./src/index.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "@elysiajs/apollo": "^1.1.1",
+    "@elysiajs/bearer": "^1.1.2",
+    "@elysiajs/cors": "^1.1.1",
+    "@elysiajs/cron": "^1.1.1",
+    "@elysiajs/jwt": "^1.1.1",
+    "@elysiajs/opentelemetry": "^1.1.7",
+    "@elysiajs/swagger": "^1.1.5",
+    "@prisma/client": "^5.22.0",
+    "elysia": "latest",
+    "graphql": "^16.9.0",
+    "pino": "^9.5.0",
+    "sqids": "^0.3.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "bun-types": "latest",
+    "prisma": "^5.22.0"
+  },
+  "module": "src/index.js"
 }
