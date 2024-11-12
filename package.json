@@ -8,11 +8,15 @@
 		"lint:fix": "bunx biome check"
 	},
 	"dependencies": {
-		"elysia": "latest"
+		"@prisma/client": "^5.22.0",
+		"elysia": "latest",
+		"pino": "^9.5.0",
+		"sqids": "^0.3.0"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"bun-types": "latest"
+		"bun-types": "latest",
+		"prisma": "^5.22.0"
 	},
 	"module": "src/index.js"
 }
