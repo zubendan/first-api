@@ -1,5 +1,5 @@
 import Sqids from "sqids";
-import { configService } from "~/src/Config/config.service";
+import { configService } from "~/src/config/config.service";
 
 const sqids = new Sqids({
 	alphabet: configService.squidsAlphabet,
