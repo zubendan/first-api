@@ -113,9 +113,9 @@ class ConfigService {
 	public readonly generateSchema: boolean;
 
 	constructor() {
-		if (!process.version.startsWith("v18.")) {
-			throw new Error("Please only use node v18");
-		}
+		// if (!process.version.startsWith("v18.")) {
+		// 	throw new Error("Please only use node v18");
+		// }
 
 		if (process.env[NODE_ENV] !== "test") {
 			if (!process.env[TYPE]) {
