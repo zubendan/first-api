@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  redis:
+    image: bitnami/redis
+    ports:
+    - "6379:6379"
+    environment:
+      REDIS_PASSWORD: secret
+  redis-rl:
+    image: bitnami/redis
+    ports:
+      - "6380:6379"
+    environment:
+      REDIS_PASSWORD: secret
+  redis-commander:
+    image: rediscommander/redis-commander
+    ports:
+    - "6381:6381"
+    environment:
+      PORT: 6381
+      REDIS_PORT: 6379
+      REDIS_HOST: redis
+      REDIS_PASSWORD: secret
+  postgres:
+    image: postgis/postgis
+    environment:
+    - POSTGRES_USER=admin
+    - POSTGRES_PASSWORD=secret
+    - POSTGRES_DB=project
+    ports:
+    - "5432:5432"
