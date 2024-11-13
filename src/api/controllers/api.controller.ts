@@ -1,5 +1,5 @@
 import Elysia from "elysia";
-import { configService } from "~/src/config/config.service";
+import { configService } from "~/config/config.service";
 
 export const apiController = new Elysia({ name: "api/controller" })
   .state("config", configService)

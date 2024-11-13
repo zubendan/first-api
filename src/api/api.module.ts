@@ -1,6 +1,6 @@
 import Elysia from "elysia";
-import { logger } from "~/src/logger";
-import { configService } from "../config/config.service";
+import { logger } from "~/logger";
+import { configService } from "~/config/config.service";
 import { apiController } from "./controllers/api.controller";
 import { testResolver } from "./resolvers/test.resolver";
 

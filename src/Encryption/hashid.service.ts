@@ -1,31 +1,25 @@
 import Sqids from "sqids";
-import { configService } from "~/src/config/config.service";
+import { configService } from "~/config/config.service";
 
 const sqids = new Sqids({
   alphabet: configService.squidsAlphabet,
   minLength: 6,
 });
 
-class HashidService {
-  constructor(private readonly sqids: Sqids) {
-    this.sqids = sqids;
-  }
-
-  public decodeOrNull(id: string): number | null {
+export const hashidService = {
+  decodeOrNull: (id: string): number | null => {
     try {
-      return this.sqids.decode(id)[0];
+      return sqids.decode(id)[0];
     } catch {
       return null;
     }
-  }
+  },
 
-  public decode(id: string): number {
-    return this.sqids.decode(id)[0];
-  }
+  decode: (id: string): number => {
+    return sqids.decode(id)[0];
+  },
 
-  public encode(id: number): string {
-    return this.sqids.encode([id]);
-  }
-}
-
-export const hashidService = new HashidService(sqids);
+  encode: (id: number): string => {
+    return sqids.encode([id]);
+  },
+};
